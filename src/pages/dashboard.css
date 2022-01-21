@@ -1,0 +1,18 @@
+.dashboard{
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+.text-end{
+    text-align: end;
+}
+.crudform{
+  
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.errorP{
+    color: red;
+}
