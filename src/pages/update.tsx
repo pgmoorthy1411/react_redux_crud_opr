@@ -7,7 +7,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { useDispatch, useSelector } from 'react-redux';
-import { postData, updateData } from '../store/actions';
+import { editUserData, postData, updateData } from '../store/actions';
 
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -26,7 +26,7 @@ const Update = () => {
     const dispatch = useDispatch();
     let { id } = useParams();
     const [editId, seteditId] = useState(id);
-    // console.log(editId);
+    console.log(editId);
 
     const { register, handleSubmit, setValue, formState: { errors } } = useForm<FormValues>();
 
@@ -50,6 +50,7 @@ const Update = () => {
 
 
     useEffect(() => {
+        // dispatch(editUserData(editId));
 
         if (ApiResponse.type != 'updated') {
             setValue("firstName", ApiResponse.username)

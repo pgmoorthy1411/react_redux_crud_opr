@@ -28,6 +28,7 @@ const Insert = () => {
     const { register, handleSubmit, formState: { errors } } = useForm<FormValues>();
 
     const onSubmit: SubmitHandler<FormValues> = data => {
+        console.log('login Clicked');
         // console.log(data);
 
         dispatch(postData(data));
@@ -38,7 +39,7 @@ const Insert = () => {
         ApiResponse: data.crudReducer.apiRespose
     }));
 
-    console.log(ApiResponse);
+    // console.log(ApiResponse);
 
     const backToHome = () => {
         navigate('/');
@@ -83,6 +84,7 @@ const Insert = () => {
                     <Grid item xs={12}>
                         {/* <Button variant="contained" type="submit">Submit</Button> */}
                         <BaseButton  text="Submit" variant="contained"   />
+                        {/* <BaseButton  text="Submits" variant="contained"  color="error"  /> */}
 
                     </Grid>
 

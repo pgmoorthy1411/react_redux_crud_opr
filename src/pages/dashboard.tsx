@@ -31,11 +31,11 @@ const Dashboard = () => {
 
   }));
 
-  console.log(ApiResponse);
+  // console.log(ApiResponse);
 
 
-  console.log(data);
-  console.log(loading);
+  // console.log(data);
+  // console.log(loading);
 
 
   const dispatch = useDispatch();
@@ -95,6 +95,7 @@ const Dashboard = () => {
         <>
           < BorderColorIcon
             onClick={() => editData(row.id)}
+            data-testid={'edit'+row.id}
             style={{ fontSize: 20, marginRight: '5px' }}
             color="primary"
           />
@@ -112,7 +113,7 @@ const Dashboard = () => {
 
 
   const deleteData = (values: any) => {
-    console.log(values);
+    // console.log(values);
     // setDelId(values)
     dispatch(deleteUserData(values))
     // setswaltDisplay(true);
@@ -120,7 +121,7 @@ const Dashboard = () => {
   };
 
   const editData = (value: any) => {
-    console.log(value)
+    // console.log(value)
     dispatch(editUserData(value));
     navigate(`updateUser/${value}`)
 
@@ -146,7 +147,7 @@ const Dashboard = () => {
       <ToastContainer />
 
       <div className='text-end'>
-        <Button variant="contained" onClick={addUser}>Add User</Button>
+        <Button variant="contained" onClick={addUser} data-testid="btn-1" id="goToAddUser">Add User</Button>
       </div>
       <div style={{ padding: "15px" }}>
         <DataTable

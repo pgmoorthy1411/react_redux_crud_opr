@@ -10,11 +10,11 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.4.0",
     "@types/node": "^16.11.21",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "@types/react-redux": "^7.1.22",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
     "react": "^17.0.2",
     "react-data-table-component": "^7.4.6",
     "react-dom": "^17.0.2",
@@ -50,5 +50,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/enzyme": "^3.10.11",
+    "@types/jest": "^27.4.0",
+    "@types/react-test-renderer": "^17.0.1",
+    "enzyme": "^3.11.0",
+    "jest": "^27.4.7"
   }
 }

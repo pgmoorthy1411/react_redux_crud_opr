@@ -14,13 +14,12 @@ import Update from './pages/update';
 function App() {
   return (
     <div className="App">
-      
-      <Routes>
-        <Route path="/"  element={<Dashboard />} />
-        <Route path="adduser"  element={<Insert />} />
-        <Route path="updateUser/:id"  element={<Update />} />
-      </Routes>
-    
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="adduser" element={<Insert />} />
+          <Route path="updateUser/:id" element={<Update />} />
+        </Routes>
+        
     </div>
   );
 }
