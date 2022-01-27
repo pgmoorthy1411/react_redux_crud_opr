@@ -69,6 +69,9 @@ const Update = () => {
         }
     }, [ApiResponse])
 
+    useEffect(() => {
+            dispatch(editUserData(editId));
+      },[editId]);
 
     const backToHome = () => {
         navigate('/');
